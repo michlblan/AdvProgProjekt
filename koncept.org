@@ -1,0 +1,22 @@
+#+LANG: cs
+#+OPTIONS: H:6
+* Návrh hry
+- 2D hra
+- Kamera posuvná když hráč dojde do určité části obrazovky
+- Platformová skákačka
+- Rozdělená na levely
+- Každý levl jiné prostředí
+  - Hory
+  - pláž
+  - cokoliv
+- Hlavně parkour orientované, základní nepřátelé
+  - Statické objekty
+  - Pohybující se objekty
+- Budeme sbírat nějaké body
+  - Minimálně 50% aby se dalo projít do dalšího levelu
+- Sebeobrana proti nepřátelům zatím není plánovaná (hráč se může jen vyhýbat)
+- Stamina na sprint
+- 5HP
+- Na mapě budou rozházené lékárničky a další boosty
+  - Zvýšená rychlost
+- Checkponity na různých místech
