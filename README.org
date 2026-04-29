@@ -1,6 +1,6 @@
 #+LANG: cs
 #+OPTIONS: H:6
-* Návrh hry
+* Návrh hry [%]
 - 2D hra
 - Kamera posuvná když hráč dojde do určité části obrazovky
 - Platformová skákačka
@@ -20,3 +20,23 @@
 - Na mapě budou rozházené lékárničky a další boosty
   - Zvýšená rychlost
 - Checkponity na různých místech
+* Postup implementace [36%] [7/19]
+- [X] Posouvání kamery
+- [X] Základní pohyb
+- [X] Smrt při pádu z mapy
+- [X] Restart levelu při selhání
+- [ ] Lepší pohyb
+- [ ] Více než 1 level
+- [ ] Lepší level textury
+- [ ] Lepší assety
+- [ ] Lepší parkour
+- [ ] Základní nepřátelé
+- [X] Statické plošiny
+- [X] Pohyblivé plošiny
+- [X] Základní sebratelné předměty
+- [ ] Průchody do dalšího levelu
+- [ ] Stamina & sprint
+- [ ] Lékarničky
+- [ ] Boosty
+- [ ] HP system
+- [ ] Checkpoint system
