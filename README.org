@@ -1,6 +1,6 @@
 #+LANG: cs
 #+OPTIONS: H:6
-* Návrh hry [%]
+* Návrh hry
 - 2D hra
 - Kamera posuvná když hráč dojde do určité části obrazovky
 - Platformová skákačka
