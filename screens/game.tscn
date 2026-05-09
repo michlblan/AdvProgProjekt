@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://bbc7084yv6r25" path="res://scripts/game_manager.gd" id="1_g7iek"]
 [ext_resource type="Texture2D" uid="uid://blq7wxgc2lodf" path="res://assets/sprites/world_tileset.png" id="2_3ciuf"]
 [ext_resource type="PackedScene" uid="uid://cf284tklgxne2" path="res://screens/platform.tscn" id="2_6nlyh"]
+[ext_resource type="FontFile" uid="uid://bhqngfdg6qlfu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_g7iek"]
 [ext_resource type="PackedScene" uid="uid://dwdoaidgexler" path="res://screens/coin.tscn" id="4_rypym"]
 [ext_resource type="PackedScene" uid="uid://cf13elubjqsd1" path="res://screens/killzone.tscn" id="5_he66p"]
 [ext_resource type="PackedScene" uid="uid://d153t4y25md8d" path="res://screens/slime.tscn" id="6_5kag3"]
-[ext_resource type="FontFile" uid="uid://34anev1f7kbp" path="res://assets/fonts/PixelOperator8.ttf" id="8_4v2gu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nlyh"]
 texture = ExtResource("2_3ciuf")
@@ -231,15 +231,23 @@ _data = {
 unique_name_in_owner = true
 script = ExtResource("1_g7iek")
 
-[node name="Label" type="Label" parent="GameManager" unique_id=1575203941]
-offset_left = 29.0
-offset_top = -23.0
-offset_right = 165.0
-offset_bottom = 35.0
-theme_override_colors/font_color = Color(0, 0.7957546, 0.5739052, 1)
-theme_override_fonts/font = ExtResource("8_4v2gu")
-theme_override_font_sizes/font_size = 8
-text = "Hello, u collected coins"
+[node name="Canvas" type="CanvasLayer" parent="GameManager" unique_id=503722768]
+layer = 3
+
+[node name="CashLabel" type="Label" parent="GameManager/Canvas" unique_id=1937409678]
+unique_name_in_owner = true
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 470.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(2.1578496, 2.7083335, 0.16573657, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 13
+theme_override_constants/shadow_offset_y = 11
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("2_g7iek")
+theme_override_font_sizes/font_size = 32
+text = "Cash nasbíráno:"
 
 [node name="player" parent="." unique_id=437742169 instance=ExtResource("1_6ydpi")]
 position = Vector2(-3, -18)

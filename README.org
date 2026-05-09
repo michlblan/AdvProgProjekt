@@ -1,6 +1,6 @@
 #+LANG: cs
 #+OPTIONS: H:6
-* Postup implementace [36%] [7/19]
+* Postup implementace [38%] [8/21]
 - [X] Posouvání kamery
 - [X] Základní pohyb
 - [X] Smrt při pádu z mapy
@@ -20,6 +20,8 @@
 - [ ] Boosty
 - [ ] HP system
 - [ ] Checkpoint system
+- [ ] Double jump powerup
+- [X] Score indicator
 * Návrh hry
 - 2D hra
 - Kamera posuvná když hráč dojde do určité části obrazovky
