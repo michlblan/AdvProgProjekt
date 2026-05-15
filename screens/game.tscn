@@ -235,6 +235,26 @@ script = ExtResource("1_g7iek")
 [node name="Canvas" type="CanvasLayer" parent="GameManager" unique_id=503722768]
 layer = 3
 
+[node name="Srdce1" type="Sprite2D" parent="GameManager/Canvas" unique_id=1274159015]
+position = Vector2(60, 96)
+texture = ExtResource("3_4v2gu")
+
+[node name="Srdce2" type="Sprite2D" parent="GameManager/Canvas" unique_id=805954602]
+position = Vector2(145, 97)
+texture = ExtResource("3_4v2gu")
+
+[node name="Srdce3" type="Sprite2D" parent="GameManager/Canvas" unique_id=2131247309]
+position = Vector2(235, 97)
+texture = ExtResource("3_4v2gu")
+
+[node name="Srdce4" type="Sprite2D" parent="GameManager/Canvas" unique_id=1090313675]
+position = Vector2(324, 98)
+texture = ExtResource("3_4v2gu")
+
+[node name="Srdce5" type="Sprite2D" parent="GameManager/Canvas" unique_id=1197777541]
+position = Vector2(409, 99)
+texture = ExtResource("3_4v2gu")
+
 [node name="CashLabel" type="Label" parent="GameManager/Canvas" unique_id=1937409678]
 unique_name_in_owner = true
 offset_left = 22.0
@@ -249,26 +269,6 @@ theme_override_constants/outline_size = 11
 theme_override_fonts/font = ExtResource("2_g7iek")
 theme_override_font_sizes/font_size = 32
 text = "Cash nasbíráno:"
-
-[node name="Srdce" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=1274159015]
-position = Vector2(38, 76)
-texture = ExtResource("3_4v2gu")
-
-[node name="Srdce2" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=805954602]
-position = Vector2(123, 76)
-texture = ExtResource("3_4v2gu")
-
-[node name="Srdce3" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=2131247309]
-position = Vector2(213, 76)
-texture = ExtResource("3_4v2gu")
-
-[node name="Srdce4" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=1090313675]
-position = Vector2(302, 77)
-texture = ExtResource("3_4v2gu")
-
-[node name="Srdce5" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=1197777541]
-position = Vector2(387, 78)
-texture = ExtResource("3_4v2gu")
 
 [node name="player" parent="." unique_id=437742169 instance=ExtResource("1_6ydpi")]
 position = Vector2(-3, -18)
@@ -351,3 +351,5 @@ autoplay = &"RESET"
 
 [node name="Slime" parent="." unique_id=36697994 instance=ExtResource("6_5kag3")]
 position = Vector2(186, 16)
+
+[connection signal="ready" from="GameManager" to="GameManager" method="_on_ready"]
