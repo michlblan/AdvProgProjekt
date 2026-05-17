@@ -23,6 +23,12 @@ buses/default_bus_layout="uid://cwpeq4m77du7o"
 
 Music="*uid://b4wldwb5ugy20"
 
+[global_group]
+
+Player=""
+Coin=""
+EnemyGroup=""
+
 [input]
 
 jump={

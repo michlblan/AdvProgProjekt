@@ -43,7 +43,7 @@ animations = [{
 [node name="Slime" type="Node2D" unique_id=36697994]
 script = ExtResource("1_2o4uh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514151835]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514151835 groups=["EnemyGroup"]]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_q2v8l")
 autoplay = "default"
