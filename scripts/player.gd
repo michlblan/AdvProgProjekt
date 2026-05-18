@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -280.0
 @onready var playerSprite = $AnimatedSprite2D
 @onready var gameManager = %GameManager
 @onready var timer = $Timer
+@onready var hitTimer = $HitTimer
 
 var hp = 5
 var immortal = false
@@ -21,15 +22,25 @@ func _on_timer_timeout() -> void:
 	self.queue_free()
 	Engine.time_scale = 1
 
+
+func _on_hit_timer_timeout() -> void:
+	print("U'r mortal again")
+	immortal = false
+
+
+# po tom co nás hitne tak jsme nesmrtelní po dobu
+# HitTimeru
 func takeDamage(dmg :int):
 	if immortal: return
+	immortal = true
 	hp -= dmg
 	gameManager.updateHp(hp)
 	if (hp <= 0):
 		print("You're dead")
 		Engine.time_scale = 0.5
 		timer.start()
-
+	else:
+		hitTimer.start()
 
 
 func _physics_process(delta: float) -> void:
@@ -66,3 +77,4 @@ func _physics_process(delta: float) -> void:
 
 	# print("Leaving fun with: " + playerSprite.animation)
 	move_and_slide()
+

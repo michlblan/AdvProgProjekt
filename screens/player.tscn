@@ -115,8 +115,12 @@ autoplay = "idle"
 position = Vector2(2, -7)
 shape = SubResource("RectangleShape2D_5jwn5")
 
+[node name="HitTimer" type="Timer" parent="." unique_id=1831304880]
+wait_time = 1.3179999999999998
+
 [node name="Timer" type="Timer" parent="." unique_id=613476451]
 wait_time = 0.693
 one_shot = true
 
+[connection signal="timeout" from="HitTimer" to="." method="_on_hit_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
