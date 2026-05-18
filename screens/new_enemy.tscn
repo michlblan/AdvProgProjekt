@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://vtj12dc0i0ab"]
+
+[ext_resource type="Texture2D" uid="uid://dg222jll1li1t" path="res://assets/sprites/slime_green.png" id="1_2d7a5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13njc"]
+atlas = ExtResource("1_2d7a5")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhkq3"]
+atlas = ExtResource("1_2d7a5")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sadn2"]
+atlas = ExtResource("1_2d7a5")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bbmd"]
+atlas = ExtResource("1_2d7a5")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fbx5g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13njc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhkq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sadn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bbmd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2d7a5"]
+radius = 6.0
+
+[node name="enemak2" type="Area2D" unique_id=1043829415 groups=["EnemyGroup"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=375640532]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_fbx5g")
+autoplay = "default"
+frame = 1
+frame_progress = 0.23271692
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1587269541]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_2d7a5")

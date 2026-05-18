@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://p1meymxqti5t" path="res://screens/player.tscn" id="1_6ydpi"]
 [ext_resource type="Script" uid="uid://bbc7084yv6r25" path="res://scripts/game_manager.gd" id="1_g7iek"]
+[ext_resource type="Script" uid="uid://buq1ahvfluku1" path="res://scripts/game.gd" id="1_okr7b"]
 [ext_resource type="Texture2D" uid="uid://blq7wxgc2lodf" path="res://assets/sprites/world_tileset.png" id="2_3ciuf"]
 [ext_resource type="PackedScene" uid="uid://cf284tklgxne2" path="res://screens/platform.tscn" id="2_6nlyh"]
 [ext_resource type="FontFile" uid="uid://bhqngfdg6qlfu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_g7iek"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dwdoaidgexler" path="res://screens/coin.tscn" id="4_rypym"]
 [ext_resource type="PackedScene" uid="uid://cf13elubjqsd1" path="res://screens/killzone.tscn" id="5_he66p"]
 [ext_resource type="PackedScene" uid="uid://d153t4y25md8d" path="res://screens/slime.tscn" id="6_5kag3"]
+[ext_resource type="PackedScene" uid="uid://vtj12dc0i0ab" path="res://screens/new_enemy.tscn" id="10_dpnst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nlyh"]
 texture = ExtResource("2_3ciuf")
@@ -227,6 +229,7 @@ _data = {
 }
 
 [node name="Game" type="Node2D" unique_id=1046953325]
+script = ExtResource("1_okr7b")
 
 [node name="GameManager" type="Node" parent="." unique_id=2101523186]
 unique_name_in_owner = true
@@ -351,3 +354,6 @@ autoplay = &"RESET"
 
 [node name="Slime" parent="." unique_id=36697994 instance=ExtResource("6_5kag3")]
 position = Vector2(186, 16)
+
+[node name="enemak2" parent="." unique_id=1043829415 instance=ExtResource("10_dpnst")]
+position = Vector2(319, -53)

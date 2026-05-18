@@ -4,6 +4,9 @@ const SPEED = 110.0
 const JUMP_VELOCITY = -280.0
 @onready var playerSprite = $AnimatedSprite2D
 
+func takeDamage(howMuch :int) -> void :
+	print("Got damage %s" % howMuch)
+
 func playIfNotPlaying(player :AnimatedSprite2D, animation :String):
 	"""Plays character animation if it's not playing yet"""
 	if (player.animation != animation):
@@ -40,6 +43,14 @@ func _physics_process(delta: float) -> void:
 		# Tento řádek nás posunuje k zemi
 		velocity += (get_gravity()*0.8) * delta
 		playIfNotPlaying(playerSprite, "jump" if (velocity.y < 0) else "fall")
+
+
+	# print("Moving coliding: %s onfloor: %s" % [velocity , isOnFloor])
+	# On je asi problém že ten enemák není fyzický objekt a tak s ním nkoliduju or wtf 
+	var collisionInfo :KinematicCollision2D = move_and_collide(velocity * delta, true)
+	if collisionInfo:
+		print(collisionInfo.get_collider())
+		# print(collisionInfo.get_collider_id())
 
 	# print("Leaving fun with: " + playerSprite.animation)
 	move_and_slide()

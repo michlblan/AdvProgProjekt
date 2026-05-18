@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://botqqed45w1es"]
+
+[ext_resource type="Script" path="res://scripts/damage_zone.gd" id="1_cqipq"]
+
+[node name="DamageZone" type="Area2D" unique_id=1945511391]
+collision_mask = 2
+script = ExtResource("1_cqipq")
+
+[node name="Timer" type="Timer" parent="." unique_id=898935619]
