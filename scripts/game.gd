@@ -8,5 +8,3 @@ extends Node2D
 func _ready() -> void:
 	enemy.playerHit.connect(player.takeDamage)
 	print("Connected")
-
-

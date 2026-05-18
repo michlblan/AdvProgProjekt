@@ -9,6 +9,12 @@ func playIfNotPlaying(player :AnimatedSprite2D, animation :String):
 	if (player.animation != animation):
 		player.play(animation)
 
+
+func takeDamage(dmg :int):
+	print("Got dammage %s" % dmg)
+
+
+
 func _physics_process(delta: float) -> void:
 	var isOnFloor = is_on_floor()
 	# Add the gravity.
