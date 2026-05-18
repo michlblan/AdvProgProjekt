@@ -20,8 +20,6 @@ func _process(delta: float) -> void:
 		animatedSprite.flip_h = false
 	position.x += direction * SPEED * delta
 
-
-
 func _on_body_entered(body: Node2D) -> void:
 	print("Body of slime entered")
 	playerHit.emit(1)
