@@ -253,7 +253,7 @@ theme_override_font_sizes/font_size = 32
 text = "Cash nasbíráno:"
 
 [node name="Srdce" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=1274159015]
-position = Vector2(38, 76)
+position = Vector2(39, 75)
 texture = ExtResource("3_4v2gu")
 
 [node name="Srdce2" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=805954602]
