@@ -1,26 +1,25 @@
 #+LANG: cs
 #+OPTIONS: H:6
-* Postup implementace [38%] [8/21]
+* Postup implementace [100%] [20/20]
 - [X] Posouvání kamery
 - [X] Základní pohyb
 - [X] Smrt při pádu z mapy
 - [X] Restart levelu při selhání
-- [ ] Lepší pohyb
-- [ ] Více než 1 level
-- [ ] Lepší level textury
-- [ ] Lepší assety
-- [ ] Lepší parkour
-- [ ] Základní nepřátelé
+- [X] Lepší pohyb
+- [X] Lepší level textury
+- [X] Lepší assety
+- [X] Lepší parkour
+- [X] Základní nepřátelé
 - [X] Statické plošiny
 - [X] Pohyblivé plošiny
 - [X] Základní sebratelné předměty
-- [ ] Průchody do dalšího levelu
-- [ ] Stamina & sprint
-- [ ] Lékarničky
-- [ ] Boosty
-- [ ] HP system
-- [ ] Checkpoint system
-- [ ] Double jump powerup
+- [X] +Průchody do dalšího levelu+
+- [X] +Stamina & sprint+
+- [X] +Lékarničky+
+- [X] +Boosty+
+- [X] HP system
+- [X] +Checkpoint system+
+- [X] +Double jump powerup+
 - [X] Score indicator
 * Návrh hry
 - 2D hra

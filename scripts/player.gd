@@ -2,12 +2,52 @@ extends CharacterBody2D
 
 const SPEED = 110.0
 const JUMP_VELOCITY = -280.0
+
 @onready var playerSprite = $AnimatedSprite2D
+@onready var gameManager = %GameManager
+@onready var timer = $Timer
+@onready var hitTimer = $HitTimer
+@onready var hitSound = $HitSound
+
+var hp = 5
+var immortal = false
+var gotPunched = false
 
 func playIfNotPlaying(player :AnimatedSprite2D, animation :String):
 	"""Plays character animation if it's not playing yet"""
 	if (player.animation != animation):
 		player.play(animation)
+
+func _on_timer_timeout() -> void:
+	print("Timer running")
+	get_tree().reload_current_scene()
+	self.queue_free()
+	Engine.time_scale = 1
+
+
+func _on_hit_timer_timeout() -> void:
+	print("U'r mortal again")
+	playerSprite.self_modulate.a = 1
+	immortal = false
+
+
+# po tom co nás hitne tak jsme nesmrtelní po dobu
+# HitTimeru
+func takeDamage(dmg :int):
+	if immortal: return
+	immortal = true
+	hp -= dmg
+	hitSound.play()
+	playerSprite.self_modulate.a = 0.5
+	gameManager.updateHp(hp)
+	gotPunched = true
+	if (hp <= 0):
+		print("You're dead")
+		Engine.time_scale = 0.5
+		timer.start()
+	else:
+		hitTimer.start()
+
 
 func _physics_process(delta: float) -> void:
 	var isOnFloor = is_on_floor()
@@ -41,5 +81,9 @@ func _physics_process(delta: float) -> void:
 		velocity += (get_gravity()*0.8) * delta
 		playIfNotPlaying(playerSprite, "jump" if (velocity.y < 0) else "fall")
 
-	# print("Leaving fun with: " + playerSprite.animation)
+	if gotPunched:
+		velocity.y = JUMP_VELOCITY *0.75
+		velocity.x = JUMP_VELOCITY
+		gotPunched = false
 	move_and_slide()
+
