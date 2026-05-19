@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -280.0
 @onready var gameManager = %GameManager
 @onready var timer = $Timer
 @onready var hitTimer = $HitTimer
+@onready var hitSound = $HitSound
 
 var hp = 5
 var immortal = false
@@ -26,6 +27,7 @@ func _on_timer_timeout() -> void:
 
 func _on_hit_timer_timeout() -> void:
 	print("U'r mortal again")
+	playerSprite.self_modulate.a = 1
 	immortal = false
 
 
@@ -35,6 +37,8 @@ func takeDamage(dmg :int):
 	if immortal: return
 	immortal = true
 	hp -= dmg
+	hitSound.play()
+	playerSprite.self_modulate.a = 0.5
 	gameManager.updateHp(hp)
 	gotPunched = true
 	if (hp <= 0):
@@ -80,7 +84,7 @@ func _physics_process(delta: float) -> void:
 	# print("Leaving fun with: " + playerSprite.animation)
 	if gotPunched:
 		velocity.y = JUMP_VELOCITY *0.75
-		velocity.x = JUMP_VELOCITY *0.8
+		velocity.x = JUMP_VELOCITY
 		gotPunched = false
 	move_and_slide()
 
