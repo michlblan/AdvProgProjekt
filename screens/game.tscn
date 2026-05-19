@@ -389,58 +389,60 @@ region_enabled = true
 region_rect = Rect2(16, 48, 32, 8)
 region_filter_clip_enabled = true
 
-[node name="Slime" parent="." unique_id=36697994 instance=ExtResource("6_5kag3")]
+[node name="Enemies" type="Node" parent="." unique_id=2043384781]
+
+[node name="Slime" parent="Enemies" unique_id=36697994 instance=ExtResource("6_5kag3")]
 position = Vector2(201, 0)
 
-[node name="Slime2" parent="." unique_id=1943908805 instance=ExtResource("6_5kag3")]
+[node name="Slime2" parent="Enemies" unique_id=1943908805 instance=ExtResource("6_5kag3")]
 position = Vector2(441, -32)
 
-[node name="Slime3" parent="." unique_id=752474304 instance=ExtResource("6_5kag3")]
+[node name="Slime3" parent="Enemies" unique_id=752474304 instance=ExtResource("6_5kag3")]
 position = Vector2(297, -160)
 
-[node name="Slime4" parent="." unique_id=1450004998 instance=ExtResource("6_5kag3")]
+[node name="Slime4" parent="Enemies" unique_id=1450004998 instance=ExtResource("6_5kag3")]
 position = Vector2(73, -128)
 
-[node name="Slime5" parent="." unique_id=1898844877 instance=ExtResource("6_5kag3")]
+[node name="Slime5" parent="Enemies" unique_id=1898844877 instance=ExtResource("6_5kag3")]
 position = Vector2(585, -112)
 
-[node name="Slime6" parent="." unique_id=831465475 instance=ExtResource("6_5kag3")]
+[node name="Slime6" parent="Enemies" unique_id=831465475 instance=ExtResource("6_5kag3")]
 position = Vector2(761, -112)
 
-[node name="Slime7" parent="." unique_id=1078043932 instance=ExtResource("6_5kag3")]
+[node name="Slime7" parent="Enemies" unique_id=1078043932 instance=ExtResource("6_5kag3")]
 position = Vector2(89, -256)
 
-[node name="Slime8" parent="." unique_id=690895948 instance=ExtResource("6_5kag3")]
+[node name="Slime8" parent="Enemies" unique_id=690895948 instance=ExtResource("6_5kag3")]
 position = Vector2(633, -192)
 
-[node name="Slime9" parent="." unique_id=2096452783 instance=ExtResource("6_5kag3")]
+[node name="Slime9" parent="Enemies" unique_id=2096452783 instance=ExtResource("6_5kag3")]
 position = Vector2(793, -192)
 
-[node name="Slime10" parent="." unique_id=1561665828 instance=ExtResource("6_5kag3")]
+[node name="Slime10" parent="Enemies" unique_id=1561665828 instance=ExtResource("6_5kag3")]
 position = Vector2(41, 32)
 
-[node name="Slime11" parent="." unique_id=1706053045 instance=ExtResource("6_5kag3")]
+[node name="Slime11" parent="Enemies" unique_id=1706053045 instance=ExtResource("6_5kag3")]
 position = Vector2(985, -368)
 
-[node name="Slime12" parent="." unique_id=585690123 instance=ExtResource("6_5kag3")]
+[node name="Slime12" parent="Enemies" unique_id=585690123 instance=ExtResource("6_5kag3")]
 position = Vector2(1161, -368)
 
-[node name="Slime13" parent="." unique_id=866245997 instance=ExtResource("6_5kag3")]
+[node name="Slime13" parent="Enemies" unique_id=866245997 instance=ExtResource("6_5kag3")]
 position = Vector2(1225, -288)
 
-[node name="Slime14" parent="." unique_id=244233477 instance=ExtResource("6_5kag3")]
+[node name="Slime14" parent="Enemies" unique_id=244233477 instance=ExtResource("6_5kag3")]
 position = Vector2(1161, -128)
 
-[node name="Slime15" parent="." unique_id=645273921 instance=ExtResource("6_5kag3")]
+[node name="Slime15" parent="Enemies" unique_id=645273921 instance=ExtResource("6_5kag3")]
 position = Vector2(1257, -64)
 
-[node name="Slime16" parent="." unique_id=1466475495 instance=ExtResource("6_5kag3")]
+[node name="Slime16" parent="Enemies" unique_id=1466475495 instance=ExtResource("6_5kag3")]
 position = Vector2(1177, -64)
 
-[node name="Slime17" parent="." unique_id=600204200 instance=ExtResource("6_5kag3")]
+[node name="Slime17" parent="Enemies" unique_id=600204200 instance=ExtResource("6_5kag3")]
 position = Vector2(617, -32)
 
-[node name="Slime18" parent="." unique_id=1880706521 instance=ExtResource("6_5kag3")]
+[node name="Slime18" parent="Enemies" unique_id=1880706521 instance=ExtResource("6_5kag3")]
 position = Vector2(793, -16)
 
 [node name="Label" type="Label" parent="." unique_id=1649621366]
