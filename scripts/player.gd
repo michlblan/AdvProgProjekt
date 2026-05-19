@@ -2,17 +2,33 @@ extends CharacterBody2D
 
 const SPEED = 110.0
 const JUMP_VELOCITY = -280.0
+
 @onready var playerSprite = $AnimatedSprite2D
+@onready var gameManager = %GameManager
+@onready var timer = $Timer
+
+var hp = 5
+var immortal = false
 
 func playIfNotPlaying(player :AnimatedSprite2D, animation :String):
 	"""Plays character animation if it's not playing yet"""
 	if (player.animation != animation):
 		player.play(animation)
 
-
+func _on_timer_timeout() -> void:
+	print("Timer running")
+	get_tree().reload_current_scene()
+	self.queue_free()
+	Engine.time_scale = 1
 
 func takeDamage(dmg :int):
-	print("Got dammage %s" % dmg)
+	if immortal: return
+	hp -= dmg
+	gameManager.updateHp(hp)
+	if (hp <= 0):
+		print("You're dead")
+		Engine.time_scale = 0.5
+		timer.start()
 
 
 
