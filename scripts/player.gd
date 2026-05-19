@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -280.0
 
 var hp = 5
 var immortal = false
+var gotPunched = false
 
 func playIfNotPlaying(player :AnimatedSprite2D, animation :String):
 	"""Plays character animation if it's not playing yet"""
@@ -35,6 +36,7 @@ func takeDamage(dmg :int):
 	immortal = true
 	hp -= dmg
 	gameManager.updateHp(hp)
+	gotPunched = true
 	if (hp <= 0):
 		print("You're dead")
 		Engine.time_scale = 0.5
@@ -76,5 +78,9 @@ func _physics_process(delta: float) -> void:
 		playIfNotPlaying(playerSprite, "jump" if (velocity.y < 0) else "fall")
 
 	# print("Leaving fun with: " + playerSprite.animation)
+	if gotPunched:
+		velocity.y = JUMP_VELOCITY *0.75
+		velocity.x = JUMP_VELOCITY *0.8
+		gotPunched = false
 	move_and_slide()
 
