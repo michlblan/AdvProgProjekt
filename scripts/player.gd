@@ -81,7 +81,6 @@ func _physics_process(delta: float) -> void:
 		velocity += (get_gravity()*0.8) * delta
 		playIfNotPlaying(playerSprite, "jump" if (velocity.y < 0) else "fall")
 
-	# print("Leaving fun with: " + playerSprite.animation)
 	if gotPunched:
 		velocity.y = JUMP_VELOCITY *0.75
 		velocity.x = JUMP_VELOCITY

@@ -16,6 +16,5 @@ func addPoint():
 	print(score)
 
 func updateHp(newLives :int):
-	print("Nově máme %s životů" % newLives)
 	for i in range(len(hearts)):
 		hearts[i].visible = !(newLives <= i)

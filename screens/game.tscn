@@ -243,7 +243,6 @@ layer = 3
 
 [node name="CashLabel" type="Label" parent="GameManager/Canvas" unique_id=1937409678]
 unique_name_in_owner = true
-visible = false
 offset_left = 22.0
 offset_top = 21.0
 offset_right = 470.0
