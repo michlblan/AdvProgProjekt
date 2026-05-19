@@ -118,6 +118,7 @@ shape = SubResource("RectangleShape2D_5jwn5")
 
 [node name="HitTimer" type="Timer" parent="." unique_id=1831304880]
 wait_time = 1.3179999999999998
+one_shot = true
 
 [node name="Timer" type="Timer" parent="." unique_id=613476451]
 wait_time = 0.693
