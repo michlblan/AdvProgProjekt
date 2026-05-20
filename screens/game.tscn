@@ -254,7 +254,7 @@ theme_override_constants/shadow_offset_y = 11
 theme_override_constants/outline_size = 11
 theme_override_fonts/font = ExtResource("2_g7iek")
 theme_override_font_sizes/font_size = 32
-text = "Cash nasbíráno:"
+text = "Nasbíráno kováků:"
 
 [node name="Srdce" type="Sprite2D" parent="GameManager/Canvas/CashLabel" unique_id=1274159015]
 position = Vector2(39, 75)
