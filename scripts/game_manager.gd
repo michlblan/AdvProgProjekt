@@ -12,7 +12,7 @@ func _ready():
 func addPoint():
 	score +=1
 	cashLabel.text = "Nasbíráno kováků: %s" % score
-	scoreLabel.text = "You collected " + str(score) + " out of 15 coins."
+	scoreLabel.text = "Nasbíráno kováků " + str(score) + " z 15."
 	print(score)
 
 func updateHp(newLives :int):
